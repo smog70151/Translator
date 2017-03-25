@@ -1,0 +1,11 @@
+//PC init 0x0000_0040
+//+ max 0x7fff_ffff
+//- max 0x8000_0000
+//-1 =  0xffff_ffff
+/*reg*/
+R8 -> 0x7fff_ffff
+R9 -> 0x8000_0000
+R10 -> 0xffff_ffff
+R11 -> temp
+R12 -> test sw
+R13.14 -> jump

@@ -13,6 +13,8 @@ void Big_Endian(unsigned int word, bool mode);
 
 int main()
 {
+    /* var */
+    int count = 0;
     /* Output file */
     iimage.open("iimage.bin",ios::out | ios::binary);
     dimage.open("dimage.bin",ios::out | ios::binary);
@@ -29,7 +31,7 @@ int main()
 
     /* Init the Number of instructions */
     cout << "Set the Instruction Number (Dec) : ";
-    cin >> hex >> num ;
+    cin >> dec >> num ;
     Big_Endian(num, true);
     /* Init the Number of instructions */
 
@@ -38,9 +40,11 @@ int main()
     opcode.clear();
     while(inst>>opcode)
     {
+        cout << "opcode " << dec << count << " : "<< opcode << endl;
         Decode(); //Decode
         opcode.clear(); // Reset
         Big_Endian((unsigned int)instruction, true);
+        count++;
     }
 
     iimage.close();
@@ -54,7 +58,7 @@ int main()
 
     /* Init the Number of data */
     cout << "Set the Memory Number (Dec) : ";
-    cin >> hex >> num ;
+    cin >> dec >> num ;
     Big_Endian(num, false);
     /* Init the Number of data */
 
