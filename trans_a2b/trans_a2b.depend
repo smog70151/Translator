@@ -1,0 +1,42 @@
+# depslib dependency file v1.0
+1490401476 source:d:\users\user\desktop\nthu\105_2nd_semester\archi\translation\mine_a2b_trans\trans_a2b\decode.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<iomanip>
+	<sstream>
+	"var.h"
+	"decode.h"
+
+1490402047 d:\users\user\desktop\nthu\105_2nd_semester\archi\translation\mine_a2b_trans\trans_a2b\var.h
+	<iostream>
+	<fstream>
+	<string>
+	<iomanip>
+	<sstream>
+
+1490385034 d:\users\user\desktop\nthu\105_2nd_semester\archi\translation\mine_a2b_trans\trans_a2b\decode.h
+	<iostream>
+	<fstream>
+	<string>
+	<iomanip>
+	<sstream>
+	"var.h"
+
+1490402030 source:d:\users\user\desktop\nthu\105_2nd_semester\archi\translation\mine_a2b_trans\trans_a2b\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<iomanip>
+	<sstream>
+	"var.h"
+	"decode.h"
+
+1490388947 source:d:\users\user\desktop\nthu\105_2nd_semester\archi\translation\mine_a2b_trans\trans_a2b\var.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<iomanip>
+	<sstream>
+	"var.h"
+
