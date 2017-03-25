@@ -21,7 +21,7 @@ void Decode()
         shamt=0;
         funct=0x20;
         instruction = (op<<26) + (rs<<21) + (rt<<16) + (rd<<11) + (shamt<<6) + funct;
-        iimage << instruction;
+        
     }
     if (opcode == "addu")
     {
@@ -32,7 +32,7 @@ void Decode()
         shamt=0;
         funct=0x21;
         instruction = (op<<26) + (rs<<21) + (rt<<16) + (rd<<11) + (shamt<<6) + funct;
-        iimage << instruction;
+        
     }
     if (opcode == "sub")
     {
@@ -43,7 +43,7 @@ void Decode()
         shamt=0;
         funct=0x22;
         instruction = (op<<26) + (rs<<21) + (rt<<16) + (rd<<11) + (shamt<<6) + funct;
-        iimage << instruction;
+        
     }
     if (opcode == "and")
     {
@@ -54,7 +54,7 @@ void Decode()
         shamt=0;
         funct=0x24;
         instruction = (op<<26) + (rs<<21) + (rt<<16) + (rd<<11) + (shamt<<6) + funct;
-        iimage << instruction;
+        
     }
     if (opcode == "or")
     {
@@ -65,7 +65,7 @@ void Decode()
         shamt=0;
         funct=0x25;
         instruction = (op<<26) + (rs<<21) + (rt<<16) + (rd<<11) + (shamt<<6) + funct;
-        iimage << instruction;
+        
     }
     if(opcode == "xor")
     {
@@ -76,7 +76,7 @@ void Decode()
         shamt=0;
         funct=0x26;
         instruction = (op<<26) + (rs<<21) + (rt<<16) + (rd<<11) + (shamt<<6) + funct;
-        iimage << instruction;
+        
     }
     if (opcode == "nor")
     {
@@ -87,7 +87,7 @@ void Decode()
         shamt=0;
         funct=0x27;
         instruction = (op<<26) + (rs<<21) + (rt<<16) + (rd<<11) + (shamt<<6) + funct;
-        iimage << instruction;
+        
     }
     if (opcode == "nand")
     {
@@ -98,7 +98,7 @@ void Decode()
         shamt=0;
         funct=0x28;
         instruction = (op<<26) + (rs<<21) + (rt<<16) + (rd<<11) + (shamt<<6) + funct;
-        iimage << instruction;
+        
     }
     if (opcode == "slt")
     {
@@ -109,7 +109,7 @@ void Decode()
         shamt=0;
         funct=0x2a;
         instruction = (op<<26) + (rs<<21) + (rt<<16) + (rd<<11) + (shamt<<6) + funct;
-        iimage << instruction;
+        
     }
     if (opcode == "sll")
     {
@@ -121,7 +121,7 @@ void Decode()
         shamt = shamt & 0x0000001f;
         funct=0x00;
         instruction = (op<<26) + (rs<<21) + (rt<<16) + (rd<<11) + (shamt<<6) + funct;
-        iimage << instruction;
+        
     }
     if (opcode == "srl")
     {
@@ -133,7 +133,7 @@ void Decode()
         shamt = shamt & 0x0000001f;
         funct=0x02;
         instruction = (op<<26) + (rs<<21) + (rt<<16) + (rd<<11) + (shamt<<6) + funct;
-        iimage << instruction;
+        
     }
     if (opcode == "sra")
     {
@@ -145,7 +145,7 @@ void Decode()
         shamt = shamt & 0x0000001f;
         funct=0x03;
         instruction = (op<<26) + (rs<<21) + (rt<<16) + (rd<<11) + (shamt<<6) + funct;
-        iimage << instruction;
+        
     }
     if( opcode == "jr")
     {
@@ -156,7 +156,7 @@ void Decode()
         shamt = 0;
         funct=0x08;
         instruction = (op<<26) + (rs<<21) + (rt<<16) + (rd<<11) + (shamt<<6) + funct;
-        iimage << instruction;
+        
     }
     if(opcode == "mult")
     {
@@ -167,7 +167,7 @@ void Decode()
         shamt = 0;
         funct=0x18;
         instruction = (op<<26) + (rs<<21) + (rt<<16) + (rd<<11) + (shamt<<6) + funct;
-        iimage << instruction;
+        
     }
     if(opcode == "multu")
     {
@@ -178,7 +178,7 @@ void Decode()
         shamt = 0;
         funct=0x19;
         instruction = (op<<26) + (rs<<21) + (rt<<16) + (rd<<11) + (shamt<<6) + funct;
-        iimage << instruction;
+        
     }
     if( opcode == "mfhi")
     {
@@ -189,7 +189,7 @@ void Decode()
         shamt = 0;
         funct=0x10;
         instruction = (op<<26) + (rs<<21) + (rt<<16) + (rd<<11) + (shamt<<6) + funct;
-        iimage << instruction;
+        
     }
     if ( opcode == "mflo")
     {
@@ -200,7 +200,7 @@ void Decode()
         shamt = 0;
         funct=0x12;
         instruction = (op<<26) + (rs<<21) + (rt<<16) + (rd<<11) + (shamt<<6) + funct;
-        iimage << instruction;
+        
     }
     /* R-type Instruction */
 
@@ -213,7 +213,7 @@ void Decode()
         inst >> immediate;
         immediate = immediate & 0x0000ffff;
         instruction = (op<<26) + (rs<<21) + (rt<<16) + immediate;
-        iimage << instruction;
+        
     }
     if ( opcode =="addiu")
     {
@@ -223,7 +223,7 @@ void Decode()
         inst >> immediate;
         immediate = immediate & 0x0000ffff;
         instruction = (op<<26) + (rs<<21) + (rt<<16) + immediate;
-        iimage << instruction;
+        
     }
     if( opcode == "lw")
     {
@@ -233,7 +233,7 @@ void Decode()
         inst >> rs;
         immediate = immediate & 0x0000ffff;
         instruction = (op<<26) + (rs<<21) + (rt<<16) + immediate;
-        iimage << instruction;
+        
     }
     if( opcode =="lh")
     {
@@ -243,7 +243,7 @@ void Decode()
         inst >> rs;
         immediate = immediate & 0x0000ffff;
         instruction = (op<<26) + (rs<<21) + (rt<<16) + immediate;
-        iimage << instruction;
+        
     }
     if( opcode =="lhu")
     {
@@ -253,7 +253,7 @@ void Decode()
         inst >> rs;
         immediate = immediate & 0x0000ffff;
         instruction = (op<<26) + (rs<<21) + (rt<<16) + immediate;
-        iimage << instruction;
+        
     }
     if( opcode =="lb")
     {
@@ -263,7 +263,7 @@ void Decode()
         inst >> rs;
         immediate = immediate & 0x0000ffff;
         instruction = (op<<26) + (rs<<21) + (rt<<16) + immediate;
-        iimage << instruction;
+        
     }
     if( opcode == "lbu")
     {
@@ -273,7 +273,7 @@ void Decode()
         inst >> rs;
         immediate = immediate & 0x0000ffff;
         instruction = (op<<26) + (rs<<21) + (rt<<16) + immediate;
-        iimage << instruction;
+        
     }
     if(opcode == "sw")
     {
@@ -283,7 +283,7 @@ void Decode()
         inst >> rs;
         immediate = immediate & 0x0000ffff;
         instruction = (op<<26) + (rs<<21) + (rt<<16) + immediate;
-        iimage << instruction;
+        
     }
     if(opcode == "sh")
     {
@@ -293,7 +293,7 @@ void Decode()
         inst >> rs;
         immediate = immediate & 0x0000ffff;
         instruction = (op<<26) + (rs<<21) + (rt<<16) + immediate;
-        iimage << instruction;
+        
     }
     if(opcode == "sb")
     {
@@ -303,7 +303,7 @@ void Decode()
         inst >> rs;
         immediate = immediate & 0x0000ffff;
         instruction = (op<<26) + (rs<<21) + (rt<<16) + immediate;
-        iimage << instruction;
+        
     }
     if(opcode =="lui")
     {
@@ -313,7 +313,7 @@ void Decode()
         inst >> immediate;
         immediate = immediate & 0x0000ffff;
         instruction = (op<<26) + (rs<<21) + (rt<<16) + immediate;
-        iimage << instruction;
+        
     }
     if(opcode =="andi")
     {
@@ -323,7 +323,7 @@ void Decode()
         inst >> immediate;
         immediate = immediate & 0x0000ffff;
         instruction = (op<<26) + (rs<<21) + (rt<<16) + immediate;
-        iimage << instruction;
+        
     }
     if (opcode =="ori")
     {
@@ -333,7 +333,7 @@ void Decode()
         inst >> immediate;
         immediate = immediate & 0x0000ffff;
         instruction = (op<<26) + (rs<<21) + (rt<<16) + immediate;
-        iimage << instruction;
+        
     }
     if (opcode =="nori")
     {
@@ -343,7 +343,7 @@ void Decode()
         inst >> immediate;
         immediate = immediate & 0x0000ffff;
         instruction = (op<<26) + (rs<<21) + (rt<<16) + immediate;
-        iimage << instruction;
+        
     }
     if (opcode =="slti")
     {
@@ -353,7 +353,7 @@ void Decode()
         inst >> immediate;
         immediate = immediate & 0x0000ffff;
         instruction = (op<<26) + (rs<<21) + (rt<<16) + immediate;
-        iimage << instruction;
+        
     }
     if (opcode =="beq")
     {
@@ -363,7 +363,7 @@ void Decode()
         inst >> immediate;
         immediate = immediate & 0x0000ffff;
         instruction = (op<<26) + (rs<<21) + (rt<<16) + immediate;
-        iimage << instruction;
+        
     }
     if (opcode =="bne")
     {
@@ -373,7 +373,7 @@ void Decode()
         inst >> immediate;
         immediate = immediate & 0x0000ffff;
         instruction = (op<<26) + (rs<<21) + (rt<<16) + immediate;
-        iimage << instruction;
+        
     }
     if (opcode =="bgtz")
     {
@@ -383,7 +383,7 @@ void Decode()
         inst >> immediate;
         immediate = immediate & 0x0000ffff;
         instruction = (op<<26) + (rs<<21) + (rt<<16) + immediate;
-        iimage << instruction;
+        
     }
     /* I-type Instruction */
 
@@ -394,7 +394,7 @@ void Decode()
         inst >> address;
         address = address & 0x03ffffff;
         instruction = (op<<26) + address;
-        iimage << instruction;
+        
     }
     if (opcode =="jal")
     {
@@ -402,7 +402,7 @@ void Decode()
         inst >> address;
         address = address & 0x03ffffff;
         instruction = (op<<26) + address;
-        iimage << instruction;
+        
     }
     /* J-type Instruction */
 
@@ -412,7 +412,7 @@ void Decode()
         op = 0x3f;
         address = 0x03ffffff;
         instruction = (op<<26) + address;
-        iimage << instruction;
+        
     }
     /* S-type Instruction */
 

@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1490401476 source:d:\users\user\desktop\nthu\105_2nd_semester\archi\translation\mine_a2b_trans\trans_a2b\decode.cpp
+1490408460 source:d:\users\user\desktop\nthu\105_2nd_semester\archi\translation\mine_a2b_trans\trans_a2b\decode.cpp
 	<iostream>
 	<fstream>
 	<string>
@@ -23,7 +23,7 @@
 	<sstream>
 	"var.h"
 
-1490402030 source:d:\users\user\desktop\nthu\105_2nd_semester\archi\translation\mine_a2b_trans\trans_a2b\main.cpp
+1490405403 source:d:\users\user\desktop\nthu\105_2nd_semester\archi\translation\mine_a2b_trans\trans_a2b\main.cpp
 	<iostream>
 	<fstream>
 	<string>
